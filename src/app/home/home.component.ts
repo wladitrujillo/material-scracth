@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Course} from "../model/course";
+import {COURSES} from "../model/db-data";
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  
+  beginnerCourses: Course[];
 
-  ngOnInit(): void {
+  advancedCourses: Course[];
+
+  constructor() {
+
+  }
+
+  ngOnInit() {
+
+      const courses:any = Object.values(COURSES);
+
+      this.beginnerCourses = courses.filter(course => course.category === 'BEGINNER');
+
+      this.advancedCourses = courses.filter(course => course.category === 'ADVANCED');
   }
 
 }
