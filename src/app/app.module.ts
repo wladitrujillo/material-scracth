@@ -11,8 +11,10 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatTableModule } from '@angular/material/table'
-import { MatInputModule } from '@angular/material/input'
+import { MatTableModule } from '@angular/material/table';
+import { MatInputModule } from '@angular/material/input';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { CoursesCardListComponent } from './courses-card-list/courses-card-list.component';
@@ -33,7 +35,9 @@ const MaterialModules = [
   MatListModule,
   MatToolbarModule,
   MatTableModule,
-  MatInputModule
+  MatInputModule,
+  MatPaginatorModule,
+  MatProgressSpinnerModule
 ]
 
 @NgModule({
