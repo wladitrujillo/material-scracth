@@ -14,6 +14,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
+import { TopMenuComponent } from './top-menu/top-menu.component';
+import { CoursesCardListComponent } from './courses-card-list/courses-card-list.component';
 
 const MaterialModules = [
   MatMenuModule,
@@ -30,7 +32,9 @@ const MaterialModules = [
   declarations: [
     AppComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    TopMenuComponent,
+    CoursesCardListComponent
   ],
   imports: [
     BrowserModule,
