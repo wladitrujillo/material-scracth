@@ -5,7 +5,7 @@ import {MatSort} from "@angular/material/sort";
 import { MatTableDataSource } from "@angular/material/table";
 import {Course} from "../model/course";
 import {CoursesService} from "../services/courses.service";
-import {debounceTime, distinctUntilChanged, startWith, tap, timeout} from 'rxjs/operators';
+import {debounceTime, distinctUntilChanged, startWith, tap, timeout, takeWhile} from 'rxjs/operators';
 import {merge, fromEvent} from "rxjs";
 
 
@@ -38,6 +38,10 @@ export class CourseComponent implements OnInit {
 
   ngAfterViewInit() {
 
+  }
+
+  searchLessons(search = ''){
+    this.dataSource.filter = search.toLowerCase().trim();
   }
 
 }
