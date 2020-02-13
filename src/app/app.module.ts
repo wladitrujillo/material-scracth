@@ -14,8 +14,13 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
-import { TopMenuComponent } from './top-menu/top-menu.component';
 import { CoursesCardListComponent } from './courses-card-list/courses-card-list.component';
+
+import { HttpClientModule } from "@angular/common/http";
+import { CoursesService } from "./services/courses.service";
+import { CourseResolver } from "./services/course.resolver";
+import { CourseComponent } from './course/course.component';
+import { CourseDialogComponent } from './course-dialog/course-dialog.component';
 
 const MaterialModules = [
   MatMenuModule,
@@ -32,18 +37,21 @@ const MaterialModules = [
   declarations: [
     AppComponent,
     HomeComponent,
-    AboutComponent,
-    TopMenuComponent,
-    CoursesCardListComponent
+    AboutComponent,  
+    CoursesCardListComponent, CourseComponent, CourseDialogComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     ...MaterialModules
 
   ],
-  providers: [],
+  providers: [
+    CoursesService,
+    CourseResolver
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
