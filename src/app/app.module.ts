@@ -11,7 +11,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatToolbarModule } from '@angular/material/toolbar';
-
+import { MatTableModule } from '@angular/material/table'
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { CoursesCardListComponent } from './courses-card-list/courses-card-list.component';
@@ -30,14 +30,15 @@ const MaterialModules = [
   MatTabsModule,
   MatSidenavModule,
   MatListModule,
-  MatToolbarModule
+  MatToolbarModule,
+  MatTableModule
 ]
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    AboutComponent,  
+    AboutComponent,
     CoursesCardListComponent, CourseComponent, CourseDialogComponent
   ],
   imports: [
