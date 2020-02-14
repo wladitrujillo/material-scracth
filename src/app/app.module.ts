@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { HttpClientModule } from "@angular/common/http";
+
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button'
 import { MatIconModule } from '@angular/material/icon';
@@ -16,12 +19,14 @@ import { MatInputModule } from '@angular/material/input';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSortModule } from '@angular/material/sort';
+import { MatDatepickerModule } from "@angular/material/datepicker";
+import { MatDialogModule } from "@angular/material/dialog";
+import { MatSelectModule } from "@angular/material/select";
+import { MatMomentDateModule } from "@angular/material-moment-adapter";
 
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { CoursesCardListComponent } from './courses-card-list/courses-card-list.component';
-
-import { HttpClientModule } from "@angular/common/http";
 import { CoursesService } from "./services/courses.service";
 import { CourseResolver } from "./services/course.resolver";
 import { CourseComponent } from './course/course.component';
@@ -41,7 +46,11 @@ const MaterialModules = [
   MatInputModule,
   MatPaginatorModule,
   MatSortModule,
-  MatProgressSpinnerModule
+  MatProgressSpinnerModule,
+  MatDatepickerModule,
+  MatDialogModule,
+  MatSelectModule,
+  MatMomentDateModule
 ]
 
 @NgModule({
@@ -49,13 +58,17 @@ const MaterialModules = [
     AppComponent,
     HomeComponent,
     AboutComponent,
-    CoursesCardListComponent, CourseComponent, CourseDialogComponent
+    CoursesCardListComponent,
+    CourseComponent,
+    CourseDialogComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
     ...MaterialModules
 
   ],
