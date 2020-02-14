@@ -15,6 +15,8 @@ import { MatTableModule } from '@angular/material/table';
 import { MatInputModule } from '@angular/material/input';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatSortModule } from '@angular/material/sort';
+
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { CoursesCardListComponent } from './courses-card-list/courses-card-list.component';
@@ -24,6 +26,7 @@ import { CoursesService } from "./services/courses.service";
 import { CourseResolver } from "./services/course.resolver";
 import { CourseComponent } from './course/course.component';
 import { CourseDialogComponent } from './course-dialog/course-dialog.component';
+
 
 const MaterialModules = [
   MatMenuModule,
@@ -37,6 +40,7 @@ const MaterialModules = [
   MatTableModule,
   MatInputModule,
   MatPaginatorModule,
+  MatSortModule,
   MatProgressSpinnerModule
 ]
 
